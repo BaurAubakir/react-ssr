@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchUsers } from '../../actions/userActions';
@@ -10,12 +10,9 @@ const Users = ({ fetchUsers, users }) => {
     fetchUsers();
   }, []);
   return (
-    <Fragment>
-      <div>Here is a big list of users:</div>
-      <ul>
-        {users && users.map(user => <UserItem key={user.id} user={user} />)}
-      </ul>
-    </Fragment>
+    <ul className='list-group'>
+      {users && users.map(user => <UserItem key={user.id} user={user} />)}
+    </ul>
   );
 };
 
