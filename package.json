@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "npm-run-all --parallel dev:*",
-    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "dev:build-server": "webpack --mode development --config config/webpack.server.js --watch",
-    "dev:build-client": "webpack-dev-server --mode development --config config/webpack.client.js --watch"
+    "dev:server": "nodemon -w build --exec \"node build/bundle.js\"",
+    "dev:build-server": "webpack --mode development --config config/webpack.server.js -w",
+    "dev:build-client": "webpack-dev-server --mode development --config config/webpack.client.js -w"
   },
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
