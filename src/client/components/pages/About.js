@@ -4,4 +4,6 @@ const About = () => {
   return <div>Hi from about page</div>;
 };
 
-export default About;
+export default {
+  component: About
+};

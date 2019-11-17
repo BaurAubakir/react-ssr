@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Users from '../users/Users';
+import Users, { loadData } from '../users/Users';
 
 const Home = () => {
   return (
@@ -11,4 +11,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default {
+  loadData,
+  component: Home
+};
