@@ -19,7 +19,8 @@ export default (req, store) => {
   const helmet = Helmet.renderStatic();
 
   return `
-    <html>
+    <!DOCTYPE html>
+      <html lang="en">
       <head>
         ${helmet.title.toString()}
         ${helmet.meta.toString()}
@@ -29,11 +30,8 @@ export default (req, store) => {
           name="viewport" 
           content="width=device-width, initial-scale=1" 
         />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="theme-color" content="#fff" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
-        />
         <link
           rel="stylesheet"
           href="libs/bootstrap/bootstrap.min.css"
